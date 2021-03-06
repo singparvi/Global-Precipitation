@@ -296,25 +296,48 @@ column1 = dbc.Col(
         ), 
                     
         # lat 
+        # dcc.Markdown('#### Latitude'), 
+        # dcc.Input(
+        #     id='lat', 
+        #     placeholder='Enter country Latitude',
+        #     type='number',
+        #     value='',
+        #     className='mb-3'
+        #     ),
         dcc.Markdown('#### Latitude'), 
-        dcc.Input(
+        dcc.Slider(
             id='lat', 
-            placeholder='Enter country Latitude',
-            type='number',
-            value='',
-            className='mb-3'
-            ),
-        
+            min=-90, 
+            max=90, 
+            step=0.5, 
+            value=42, 
+            marks={n: str(n) for n in range(-90,90,20)}, 
+            className='mb-1', 
+        ),         
+        dcc.Markdown('', id='lat_display'), 
+
         # long 
+        # dcc.Markdown('#### Longitude'), 
+        # dcc.Input(
+        #     id='long', 
+        #     placeholder='Enter country Longitude',
+        #     type='number',
+        #     value='',
+        #     className='mb-3'
+        #     ),
         dcc.Markdown('#### Longitude'), 
-        dcc.Input(
+        dcc.Slider(
             id='long', 
-            placeholder='Enter country Longitude',
-            type='number',
-            value='',
-            className='mb-3'
-            ),
+            min=-180, 
+            max=180, 
+            step=0.5, 
+            value=1.5, 
+            marks={n: str(n) for n in range(-180,180,40)}, 
+            className='mb-1', 
+        ), 
         
+        dcc.Markdown('', id='long_display'), 
+
         # Elevation
         dcc.Markdown('#### Elevation'), 
         dcc.Slider(
@@ -564,6 +587,19 @@ layout = dbc.Row([column1, column2, column3])
 # def update_output_div(input_value):
 #     return input_value
 
+@app.callback(
+    Output(component_id='lat_display', component_property='children'),
+    [Input(component_id='lat', component_property='value')]
+)
+def lat_display(input_value):
+    return 'Latitude is {} degree'.format(input_value)
+
+@app.callback(
+    Output(component_id='long_display', component_property='children'),
+    [Input(component_id='long', component_property='value')]
+)
+def long_display(input_value):
+    return 'Longitude is {} degree'.format(input_value)
 
 @app.callback(
     Output(component_id='elevation_display', component_property='children'),
@@ -678,4 +714,4 @@ def predict(country_code, lat, long, elevation, surface_pressure,
        clear_sky_insolation, all_sky_insolation, radiative_flux]]
     )
     y_pred = pipeline.predict(df)[0]
-    return f'{y_pred}'
+    return f'{y_pred:.2f} mm'
