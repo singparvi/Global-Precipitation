@@ -16,15 +16,15 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ### Predict Precipitation Globally!
+            ### Predict Precipitation using Global Climate Data!
             
             
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            The app can be used to make a prediction based on various climate conditions. Just select .
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
+            💧 MET is an online application that helps you make prediction based on data from the past. The application can be used how precipitation changes by 🌎 latitude, longitude or by changing 🇨🇦 🇺🇸 countries.
 
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            
 
             """
         ),
