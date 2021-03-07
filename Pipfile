@@ -18,4 +18,4 @@ xgboost = "==1.3.3"
 dash-daq = "*"
 
 [requires]
-python_version = "3"
+python_version = "3.9.2"
