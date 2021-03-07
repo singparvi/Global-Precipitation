@@ -278,7 +278,7 @@
                 "sha256:fc351cd2df318674669481eb978a7799f24fd14ef26987a1aa75105b0531d1a1"
             ],
             "index": "pypi",
-            "version": "==1.2.2"
+            "version": "==1.1.5"
         },
         "patsy": {
             "hashes": [
