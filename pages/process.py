@@ -86,8 +86,7 @@ column1 = dbc.Col(
 
             The definition of all the features mentioned above was provided in the text above. **Precipitation** was chosen as the **target**.
 
-            The target was skewed to the right due to the presence of some 300 observations. 
-
+            The target was skewed to the right due to the presence of some 300 observations.
             ### Baseline
 
             Precipitation mean was chosen to set a baseline to compare the model performance. Precipitation mean was calculated for the entire data and was determined as **2.787 mm**. Mean Absolute Error (MAE) was calculated and was found to be **3.379 mm**. The baseline MAE is used to compare various models to see how each model fare in precipitation predictions.
@@ -123,6 +122,7 @@ column1 = dbc.Col(
             | Time to fit the model | 22 sec |
             | Training Score (R<sup>2</sup>) | 93.70 % |
             | Validation Score (R<sup>2</sup>) | 44.02 % |
+            | Test Score (R<sup>2</sup>) | 44.22 % |
             | Baseline MAE | 3.379 mm
             | Model MAE | 2.198 mm
             | Improvement over Baseline MAE | 53.73 %
@@ -146,6 +146,7 @@ column1 = dbc.Col(
             | Time to fit the model | 222 sec |
             | Training Score (R<sup>2</sup>)| 93.70 % |
             | Validation Score (R<sup>2</sup>)| 47.76 % |
+            | Validation Score (R<sup>2</sup>)| 47.30 % |
             | Baseline MAE | 3.379 mm
             | Model MAE | 1.965 mm
             | Improvement over Baseline MAE | 71.89 %
@@ -177,6 +178,7 @@ column1 = dbc.Col(
             | Time to fit the model | 11.47 sec |
             | Training Score (R<sup>2</sup>)| 59.00 % |
             | Validation Score (R<sup>2</sup>)| 48.45 % |
+            | Test Score (R<sup>2</sup>)| 35.98 % |
             | Baseline MAE | 3.379 mm
             | Model MAE | 2.022 mm
             | Improvement over Baseline MAE | 67.09 %
@@ -224,17 +226,17 @@ column1 = dbc.Col(
 
             ## GitHub Repository
 
-            See the link below for the code used to generate the population DataFrame.
-            [https://github.com/singparvi/US-Gun-Sales/tree/main/US_Population_Code](https://github.com/singparvi/US-Gun-Sales/tree/main/US_Population_Code)
+            See the link below for the code used to get the DataFrame used in this research.
+            [https://github.com/singparvi/Colab_Notebooks/blob/master/Unit%202%20-%20Linear%20Models/Sprint_4_Build_Precipitation_Prediction/Get_Precipiration_Data_NASA_Submission.ipynb](https://github.com/singparvi/Colab_Notebooks/blob/master/Unit%202%20-%20Linear%20Models/Sprint_4_Build_Precipitation_Prediction/Get_Precipiration_Data_NASA_Submission.ipynb)
 
-            The code for the graphics shown below could be in the link:-
-            [https://github.com/singparvi/US-Gun-Sales/blob/main/US_Gun_Sales_Code/US_Gun_Sales_Analysis.ipynb](https://github.com/singparvi/US-Gun-Sales/blob/main/US_Gun_Sales_Code/US_Gun_Sales_Analysis.ipynb)
+            The code for the predictive modelling done in this project can be found in the link:-
+            [https://github.com/singparvi/Colab_Notebooks/blob/master/Unit%202%20-%20Linear%20Models/Sprint_4_Build_Precipitation_Prediction/Predict_Precipitation_Submission.ipynb](https://github.com/singparvi/Colab_Notebooks/blob/master/Unit%202%20-%20Linear%20Models/Sprint_4_Build_Precipitation_Prediction/Predict_Precipitation_Submission.ipynb)
 
             ## Sources
 
             <sup>1</sup>[NASA POWER app](https://power.larc.nasa.gov/data-access-viewer/)
 
-            <sup>2</sup>[Latitude Longitude of Countries from albertyw]((https://github.com/albertyw/avenews/blob/master/old/data/average-latitude-longitude-countries.csv))
+            <sup>2</sup>[Latitude Longitude of Countries from albertyw](https://github.com/albertyw/avenews/blob/master/old/data/average-latitude-longitude-countries.csv)
 
             <sup>3</sup>[Forest Cover Data from World Bank](https://data.worldbank.org/indicator/AG.LND.FRST.K2)
             """
