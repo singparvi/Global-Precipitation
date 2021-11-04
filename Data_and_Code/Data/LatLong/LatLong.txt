@@ -1,0 +1,1 @@
+https://github.com/albertyw/avenews/blob/master/old/data/average-latitude-longitude-countries.csv
